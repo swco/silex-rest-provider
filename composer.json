@@ -1,5 +1,5 @@
 {
-    "name": "warmans/silex-rest-provider",
+    "name": "swco/silex-rest-provider",
     "type": "library",
     "description": "Basic library for generating REST resources in Silex using extremely terse configuration. Based somewhat on mach/silex-rest.",
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "silex/silex": "~1.2.0"
+        "silex/silex": "~1.3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.*",

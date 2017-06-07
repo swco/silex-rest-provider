@@ -6,7 +6,7 @@ use Silex\Application;
 class RestService
 {
     /**
-     * @var \Silex\Application
+     * @var Application
      */
     protected $app;
 
@@ -35,6 +35,7 @@ class RestService
      *
      * @param array $resourceConfig
      * @param array $parentUris
+     *
      * @throws \RuntimeException
      */
     public function createResource(array $resourceConfig, array $parentUris=array())
@@ -102,9 +103,10 @@ class RestService
     /**
      * Register a controller if one is passed as part of the resource config.
      *
-     * @param $uri
-     * @param callable $factory
-     * @param array $parentUris
+     * @param string   $uri
+     * @param \Closure $factory
+     * @param array    $parentUris
+     *
      * @return string
      */
     public function registerController($uri, \Closure $factory, array $parentUris=array())
@@ -127,9 +129,10 @@ class RestService
      * Given the parents and current uri create a routeable uri. If getUri is true also include an id
      * for the right-most resource. For as many IDs as exist in the full path append another ID to the route param.
      *
-     * @param $uri
-     * @param array $parentUris
-     * @param bool $includeResourceId
+     * @param string $uri
+     * @param array  $parentUris
+     * @param bool   $includeResourceId
+     *
      * @return string
      */
     public function createRouteUri($uri, $parentUris=array(), $includeResourceId=false)
